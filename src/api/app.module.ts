@@ -4,6 +4,12 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { join } from 'path';
 import { config } from 'src/config';
+import { BookImageModule } from './book_image/book_image.module';
+import { BookListingModule } from './book_listing/book_listing.module';
+import { CategoryModule } from './category/category.module';
+import { LikeModule } from './like/like.module';
+import { ProfileModule } from './profile/profile.module';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
@@ -21,6 +27,12 @@ import { config } from 'src/config';
       rootPath: join(process.cwd(), '..', config.FILE_PATH),
       serveRoot: `/api/v1${config.FILE_PATH}`,
     }),
+    BookImageModule,
+    BookListingModule,
+    CategoryModule,
+    LikeModule,
+    ProfileModule,
+    UserModule,
   ],
 })
 export class AppModule {}

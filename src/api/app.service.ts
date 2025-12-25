@@ -23,18 +23,6 @@ export class Aplication {
       prefix: '/' + config.BASE_URL + '/',
     });
 
-    app.set('trust proxy', true);
-
-    app.enableCors({
-      origin: [
-        'https://www.ustatop.org.uz',
-        'https://ustatop.org.uz',
-        'https://ustatopuz.netlify.app',
-        'https://ustatopadminpanel.netlify.app',
-      ],
-      credentials: true,
-    });
-
     app.useGlobalFilters(new AllExceptionFilter());
 
     // ========================= VALIDATSIYA =========================
@@ -59,7 +47,7 @@ export class Aplication {
 
     // ========================= SWAGGER =========================
     const configSwagger = new DocumentBuilder()
-      .setTitle('Ustatop.uz')
+      .setTitle('Kitobchi.uz')
       .setVersion('1.0.0')
       .addBearerAuth({
         type: 'http',
@@ -71,7 +59,7 @@ export class Aplication {
     const documentSwagger = SwaggerModule.createDocument(app, configSwagger);
     SwaggerModule.setup(api, app, documentSwagger);
 
-    const logging = new Logger('Swagger-Ustatop.uz');
+    const logging = new Logger('Swagger-Kitobchi.uz');
 
     // ========================= PORT =========================
 
