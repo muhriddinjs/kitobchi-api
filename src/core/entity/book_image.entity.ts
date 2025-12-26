@@ -1,12 +1,5 @@
-import {
-  Entity,
-  PrimaryGeneratedColumn,
-  Column,
-  ManyToOne,
-  CreateDateColumn,
-  JoinColumn,
-} from 'typeorm';
 import { BaseEntity } from 'src/common/database/base.entity';
+import { Column, Entity, JoinColumn, ManyToOne } from 'typeorm';
 import { bookListingEntity } from './book_listing.entity';
 
 @Entity('book_images')

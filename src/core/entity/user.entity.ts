@@ -9,7 +9,7 @@ import { profileEntity } from './profile.entity';
 @Entity('users')
 export class userEntity extends BaseEntity {
   @Column({ unique: true })
-  email: string;
+  phone_number: string;
 
   @Column()
   passwordHash: string;
