@@ -1,4 +1,3 @@
-// profiles.entity.ts
 import { BaseEntity } from 'src/common/database/base.entity';
 import { Column, Entity, JoinColumn, OneToOne } from 'typeorm';
 import { userEntity } from './user.entity';

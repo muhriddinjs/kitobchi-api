@@ -9,7 +9,7 @@ import { AllExceptionFilter } from 'src/lib/exception/AllException';
 import { AppModule } from './app.module';
 
 const PORT = config.API_PORT;
-const api = 'api/v1'// config.API_VERSION;
+const api = 'api/v1'; // config.API_VERSION;
 
 export class Aplication {
   static async main(): Promise<void> {

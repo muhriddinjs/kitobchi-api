@@ -1,4 +1,3 @@
-// categories.entity.ts
 import { BaseEntity } from 'src/common/database/base.entity';
 import { Column, Entity, OneToMany } from 'typeorm';
 import { bookListingEntity } from './book_listing.entity';

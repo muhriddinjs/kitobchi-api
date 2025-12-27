@@ -1,4 +1,4 @@
-import { IResponsePagination } from "src/lib/response/success.interface";
+import { IResponsePagination } from 'src/lib/response/success.interface';
 
 export class Pager<T> {
   public static of<T>(

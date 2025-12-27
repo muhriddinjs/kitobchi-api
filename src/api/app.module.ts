@@ -10,6 +10,8 @@ import { CategoryModule } from './category/category.module';
 import { LikeModule } from './like/like.module';
 import { ProfileModule } from './profile/profile.module';
 import { UserModule } from './user/user.module';
+import { AdminModule } from './admin/admin.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -33,6 +35,8 @@ import { UserModule } from './user/user.module';
     LikeModule,
     ProfileModule,
     UserModule,
+    AdminModule,
+    AuthModule,
   ],
 })
 export class AppModule {}

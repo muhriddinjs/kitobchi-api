@@ -1,4 +1,3 @@
-// book-listings.entity.ts
 import { BaseEntity } from 'src/common/database/base.entity';
 import { ListingStatus, ListingType } from 'src/common/enum';
 import { Column, Entity, JoinColumn, ManyToOne, OneToMany } from 'typeorm';

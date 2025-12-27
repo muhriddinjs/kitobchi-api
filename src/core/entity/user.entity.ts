@@ -1,4 +1,3 @@
-// users.entity.ts
 import { BaseEntity } from 'src/common/database/base.entity';
 import { UnifiedRoles, UserStatus } from 'src/common/enum';
 import { Column, Entity, OneToMany, OneToOne } from 'typeorm';
@@ -9,10 +8,10 @@ import { profileEntity } from './profile.entity';
 @Entity('users')
 export class userEntity extends BaseEntity {
   @Column({ unique: true })
-  phone_number: string;
+  phoneNumber: string;
 
   @Column()
-  passwordHash: string;
+  hashed_password: string;
 
   @Column({ type: 'enum', enum: UnifiedRoles, default: UnifiedRoles.USER })
   role: UnifiedRoles;
@@ -22,6 +21,12 @@ export class userEntity extends BaseEntity {
 
   @Column({ nullable: true })
   lastLoginAt: Date;
+
+  @Column({ nullable: true })
+  isActive: boolean;
+
+  @Column({ nullable: true })
+  isDeleted: boolean;
 
   @OneToOne(() => profileEntity, (profile) => profile.user)
   profile: profileEntity;

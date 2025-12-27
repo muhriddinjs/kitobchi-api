@@ -1,7 +1,9 @@
+import {
+  IFindOptions,
+  IResponsePagination,
+} from 'src/lib/response/success.interface';
 import { FindManyOptions, ObjectLiteral, Repository } from 'typeorm';
 import { Pager } from './Pager';
-import { IFindOptions, IResponsePagination } from 'src/lib/response/success.interface';
-
 
 export class RepositoryPager {
   public static readonly DEFAULT_PAGE = 1;

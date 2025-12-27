@@ -5,7 +5,7 @@ type ConfigType = {
   API_PORT: number;
   DB_URL: string;
   DB_SYNC: boolean;
-  ADMIN_USERNAME: string;
+  ADMIN_PHONE: string;
   ADMIN_PASSWORD: string;
   TOKEN: {
     ACCESS_KEY: string;
@@ -24,7 +24,7 @@ export const config: ConfigType = {
       ? String(process.env.DEV_DB_URL)
       : String(process.env.PROD_DB_URL),
   DB_SYNC: String(process.env.NODE_ENV) === 'dev' ? true : false,
-  ADMIN_USERNAME: String(process.env.ADMIN_USERNAME),
+  ADMIN_PHONE: String(process.env.ADMIN_PHONE),
   ADMIN_PASSWORD: String(process.env.ADMIN_PASSWORD),
   TOKEN: {
     ACCESS_KEY: String(process.env.ACCESS_TOKEN_KEY),
